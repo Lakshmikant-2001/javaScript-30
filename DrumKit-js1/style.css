@@ -4,34 +4,37 @@
   padding: 0;
 }
 
-
 html {
   font-size: 10px;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Electrolize', sans-serif;
   background: url('./background.jpg') bottom center;
   background-size: cover;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .keys {
   display: flex;
-  flex: 1;
-  min-height: 100vh;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
 .key {
-  border: .4rem solid black;
-  border-radius: .5rem;
+  border: .4rem solid #ffffff90;
+  border-radius:1.5rem 0;
   margin: 1rem;
   font-size: 1.5rem;
-  padding: 1rem .5rem;
+  padding: 1.5rem .5rem;
   transition: all .07s ease;
-  width: 10rem;
+  min-width: 120px;
   text-align: center;
   color: white;
   background: rgba(0, 0, 0, 0.4);
@@ -39,19 +42,29 @@ body {
 }
 
 .playing {
-  transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+  transform: scale(1.11);
+  border-color: #00f5d4;
+  box-shadow: 0 0 1rem #00f5d4;
 }
 
 kbd {
+  font-family:inherit;
   display: block;
   font-size: 4rem;
+  margin-bottom:1rem;
 }
 
 .sound {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
+  font-weight: bolder;
   letter-spacing: .1rem;
-  color: #ffc600;
+  color: #fcd5ce;
+}
+
+.sound-name{
+  font-weight: bolder;
+  margin-bottom:7rem;
+  font-size: 3rem;
+  color:#00f5d4;
 }
