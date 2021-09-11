@@ -10,7 +10,7 @@ html {
 
 body {
   font-family: 'Electrolize', sans-serif;
-  background: url('./background.jpg') bottom center;
+  background: url('./assets/background.jpg') bottom center;
   background-size: cover;
   backdrop-filter: blur(50px);
   display: flex;
@@ -28,7 +28,7 @@ body {
 }
 
 .key {
-  border: .4rem solid #ffffff90;
+  border: .4rem solid #ffffff95;
   border-radius:1.5rem 0;
   margin: 1rem;
   font-size: 1.5rem;
@@ -55,7 +55,7 @@ kbd {
 }
 
 .sound {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: bolder;
   letter-spacing: .1rem;
