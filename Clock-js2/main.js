@@ -20,14 +20,19 @@ function setClock() {
     setRotation(secondsHand, secondsRatio);
     setRotation(minutesHand, minutesRatio);
     setRotation(hoursHand, hoursRatio);
-    const rotationValue = secondsHand.style.getPropertyValue('--rotation');
+    fixTransition(secondsHand);
+    fixTransition(minutesHand);
+    fixTransition(hoursHand);
+}
+
+function fixTransition(hand){
+    const rotationValue = hand.style.getPropertyValue('--rotation');
     if(rotationValue==0){
-        secondsHand.style.transition="none";
+        hand.style.transition="none";
     }
     else{
-        secondsHand.style.transition="transform .1s cubic-bezier(0.01, 2.5, 1, 1)";
+       hand.style.transition="transform .1s cubic-bezier(0.01, 2.5, 0.07, 1.31)";
     }
-    console.log(rotationValue);
 }
 
 function setRotation(hand, ratio) {
@@ -37,19 +42,19 @@ function setRotation(hand, ratio) {
 function sound() {
     const speakerIconType = speakerIcon.getAttribute('title');
     if (speakerIconType == "click to mute") {
-        console.log("s");
         speakerIcon.classList.toggle('fa-volume-up');
         speakerIcon.classList.toggle('fa-volume-off');
         speakerIcon.setAttribute('title', "click to unmute");
-        audio.pause();
+        audio.volume=0;
     }
     else {
         speakerIcon.classList.toggle('fa-volume-up');
         speakerIcon.classList.toggle('fa-volume-off');
         speakerIcon.setAttribute('title', "click to mute");
         audio.play();
+        audio.volume=1;
         audio.loop="true"
-        audio.currentTime = 0;
+        audio.currentTime=0;
     }
 
 }

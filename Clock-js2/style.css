@@ -64,6 +64,7 @@ body {
     background-color: black;
     transform-origin: bottom;
     background-color: white;
+    transition: transform .1s cubic-bezier(0.01, 2.5, 0.07, 1.31);
 }
 
 .seconds {
@@ -72,7 +73,6 @@ body {
     border-radius: .5rem .5rem 0;
     background-color: red;
     z-index: 3;
-    transition: transform .1s cubic-bezier(0.01, 2.5, 1, 1);
 }
 
 .minutes {
@@ -186,4 +186,5 @@ body {
     background: linear-gradient(to top, #44444499, #222, #000);
     -webkit-background-clip: text;
     color: transparent;
+    cursor:pointer;
 }
