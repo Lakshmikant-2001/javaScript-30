@@ -55,6 +55,7 @@ img {
   padding: var(--spacing);
   background-color: var(--base);
   border-radius:var(--radius);
+  width: 750px;
 }
 
 .hl {
