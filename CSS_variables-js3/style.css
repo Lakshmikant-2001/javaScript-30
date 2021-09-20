@@ -1,43 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
 
-*,
-*::before, 
-*::after{
-  margin:0;
-  padding:0;
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-:root{
-  --spacing:10px;
-  --blur:10px;
-  --base:#ffc600;
+:root {
+  --spacing: 10px;
+  --blur: 10px;
+  --base: #4dc3f1;
 }
 
 body {
-    text-align: center;
-    background: #193549;
-    color: white;
-    font-family: 'Gluten', cursive;
-    font-weight: 100;
-    font-size: 50px;
-    overflow:hidden;
-  }
+  text-align: center;
+  background: url(./assets/bg.svg);
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 100;
+  overflow: hidden;
+  font-size:2rem;
+  font-weight: bold;
+}
 
-  body>h2{
-    margin:5rem 0 3rem;
-  }
-  .controls {
-    margin-bottom: 50px;
-  }
+body>h2 {
+  margin: 3rem 0 3rem;
+  font-size:3.5rem;
+}
 
-  input {
-    width: 100px;
-  }
+.controls {
+  margin-bottom: 50px;
+}
 
-  img{
-    margin-top:1rem;
-    filter:blur(var(--blur));
-    padding:var(--spacing);
-    background-color: var(--base);
-  }
+input {
+  width: 100px;
+}
+
+img {
+  margin-top: 1rem;
+  filter: blur(var(--blur));
+  padding: var(--spacing);
+  background-color: var(--base);
+}
+
+.hl {
+  text-shadow: 3px 3px var(--base);
+}

@@ -1,5 +1,4 @@
 const inputElements = document.querySelectorAll('input');
-console.log(inputElements)
 
 function updateValues() {
     const suffix = this.dataset.sizing || '';
@@ -7,7 +6,7 @@ function updateValues() {
 }
 
 inputElements.forEach(input => {
-    input.addEventListener('click', updateValues)
+    input.addEventListener('change', updateValues)
 });
 
 inputElements.forEach(input => {
