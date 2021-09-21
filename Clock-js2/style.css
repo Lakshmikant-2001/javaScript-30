@@ -14,6 +14,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     user-select: none;
+    overflow: hidden;
 }
 
 .clock {
@@ -46,8 +47,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
     border: 2px solid #fff;
     transform: translate(-50%, -50%);
     background-color: #a74d19;
@@ -64,7 +65,7 @@ body {
     background-color: black;
     transform-origin: bottom;
     background-color: white;
-    transition: transform .9s cubic-bezier(0.01, 2.5, 0.07, 1.31);
+    transition: transform .9s cubic-bezier(0.01, 2, 0.07, 1.31);
 }
 
 .seconds {
@@ -196,7 +197,8 @@ body {
     }
     #speaker-icon {
         position: unset;
-        margin: 1rem 0 7rem;
+        margin: 1rem 0 8rem;
+        transform: scale(2);
     }
     .date {
         font-size: 2rem;
@@ -204,6 +206,25 @@ body {
     .time {
         font-size: 1.5rem;
         margin-bottom: 1rem;
+    }
+    .hour {
+        font-size: 1.5rem;
+    }
+    .hour:nth-child(3n) {
+        font-size: 2.5rem;
+    }
+    .clock::after {
+        width: 12px;
+        height: 12px;
+    }
+    .seconds {
+        width: 3.2px;
+    }
+    .minutes {
+        width: 4.2px;
+    }
+    .hours {
+        width: 5.2px;
     }
 }
 
@@ -219,6 +240,25 @@ body {
         font-size: 1.3rem;
     }
     #speaker-icon {
-        transform: scale(2)
+        transform: scale(1.6);
+    }
+    .hour {
+        font-size: 1.2rem;
+    }
+    .hour:nth-child(3n) {
+        font-size: 1.9rem;
+    }
+    .seconds {
+        width: 2.2px;
+    }
+    .minutes {
+        width: 3.2px;
+    }
+    .hours {
+        width: 4.2px;
+    }
+    .clock::after {
+        width: 8px;
+        height: 8px;
     }
 }
