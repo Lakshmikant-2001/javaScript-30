@@ -34,7 +34,7 @@ body {
     width: 115%;
     height: 115%;
     transform: translate(-50%, -50%);
-    background-color: #db8858;
+    background-color: #d4d4d4;
     background-image: linear-gradient(60deg, #db8858, #dc8959, #dd9060);
     box-shadow: 15px 15px 15px #00000050, -5px -10px 12px #00000050, 3px 2px 20px #00000030 inset, -3px 0 20px #00000030 inset;
     border-radius: 50%;
@@ -102,7 +102,7 @@ body {
     font-size: 3rem;
     font-weight: bolder;
     color: #e6e1e1;
-     font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .hour:last-child {
@@ -186,5 +186,39 @@ body {
     background: linear-gradient(to top, #44444499, #222, #000);
     -webkit-background-clip: text;
     color: transparent;
-    cursor:pointer;
+    cursor: pointer;
+}
+
+@media (max-width:600px) {
+    .clock {
+        width: 300px;
+        height: 300px;
+    }
+    #speaker-icon {
+        position: unset;
+        margin: 1rem 0 7rem;
+    }
+    .date {
+        font-size: 2rem;
+    }
+    .time {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width:420px) {
+    .clock {
+        width: 200px;
+        height: 200px;
+    }
+    .date {
+        font-size: 1.8rem;
+    }
+    .time {
+        font-size: 1.3rem;
+    }
+    #speaker-icon {
+        transform: scale(2)
+    }
 }
